@@ -4,6 +4,12 @@ import javax.swing.*;
 
 public class App extends JFrame {
     public static void main(String[] args) {
-        new MainWindow().setVisible(true);
+        SwingUtilities.invokeLater(() -> {
+            try{
+                new MainWindow().setVisible(true);
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        });
     }
 }
