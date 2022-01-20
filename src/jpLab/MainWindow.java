@@ -2,32 +2,48 @@ package jpLab;
 
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 public class MainWindow extends JFrame {
-    private final int WINDOW_WIDTH = 1000;
-    private final int WINDOW_HEIGHT = 800;
-    private JPanel jPanel;
+
+    private int delay = 10;
+
+    private final int WINDOW_WIDTH = 800;
+    private final int WINDOW_HEIGHT = 600;
+    private JButton buttonStart;
 
     public MainWindow() {
         this.setTitle("agar.io");
         this.setSize(WINDOW_WIDTH, WINDOW_HEIGHT);
         this.setLocationRelativeTo(null);
-        /**
-         * Zamieniłem te 5 linijek w jedną (16 linia)
-         */
-//        int width = Toolkit.getDefaultToolkit().getScreenSize().width;
-//        int height = Toolkit.getDefaultToolkit().getScreenSize().height;
-//        int screenWidth = this.getSize().width;
-//        int screenHeight = this.getSize().height;
-//        this.setLocation((width - screenWidth) / 2, (height - screenHeight) / 2);
         this.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         initComponents();
     }
 
     private void initComponents() {
-        jPanel = new JPanel();
-        jPanel.setBounds(0, 0, WINDOW_WIDTH, WINDOW_HEIGHT);
-        setContentPane(jPanel);
-        jPanel.setLayout(null);
+        setLayout(new GridBagLayout());
+        buttonStart = new JButton("START");
+        buttonStart.addActionListener(new buttonStartListener());
+        add(buttonStart);
+    }
+
+    class buttonStartListener implements ActionListener {
+        public void actionPerformed(ActionEvent e) {
+            buttonStart.setVisible(false);
+            Animation animation = new Animation();
+            animation.setBounds(0, 0, WINDOW_WIDTH, WINDOW_HEIGHT);
+            setBackground(Color.BLACK);
+            setLayout(null);
+            add(animation);
+            SwingUtilities.invokeLater(new Runnable() {
+                @Override
+                public void run() {
+                    animation.initialize();
+                    animation.addFig();
+                    animation.animate();
+                }
+            });
+        }
     }
 }
