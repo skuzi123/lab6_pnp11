@@ -24,13 +24,6 @@ UWAGA:
 
 - Dodałem klase SwingElements dzięki której można tworzyć predefiniowane elementy biblioteki Swing. Jak coś trzeba to zmieniajcie lub dodawajcie :)
 
-#Kacper Krupiński
-
-- Dodanie losowego "spawnu" obiektów
-- Dodanie losowej rozszeszalności obiektów
-- Poprawnienie ustawnienia kanwy i guzików (dalej drobne problemy)
-- Lekka refactoryzacja kodu
-
 #Mateusz Skuza
 
 -Dodałem przycisk umożliwiający zmianę koloru kulki.
@@ -40,3 +33,10 @@ UWAGA:
 #Andrzej Kwaśniewski
 
 - Dodałem przycisk wyjścia z aplikacji
+
+#Kacper Krupiński
+
+- Dodanie losowego "spawnu" obiektów
+- Dodanie losowej rozszeszalności obiektów
+- Poprawnienie ustawnienia kanwy i guzików (dalej drobne problemy)
+- Lekka refactoryzacja kodu
