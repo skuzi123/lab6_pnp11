@@ -84,7 +84,26 @@ public class MainWindow extends JFrame {
             public void componentResized(ComponentEvent e) {
                 super.componentResized(e);
                 int w=jPanel.getWidth(),h=jPanel.getHeight();
-                kanwa.setBounds(10,10,w,h-30);
+                kanwa.clearAll();
+                kanwa.setBounds(10,10,w-20,h-50);
+
+                int w1 = w-710;
+                if (w1 <=210)
+                    w1=210;
+
+                int w2 = w-500;
+                if (w2 <=370)
+                    w2=370;
+
+                int w3 = w-110;
+                if (w3 <=530)
+                    w3=530;
+
+                btnAnimate.setLocation(110, h-27);
+                btnAdd.setLocation(10, h-27);
+                colorButton.setLocation(w1,h-27);
+                randomColor.setLocation(w2,h-27);
+                btnExit.setLocation(w3, h-27);
 
             }
         });

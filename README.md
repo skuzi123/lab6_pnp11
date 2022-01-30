@@ -40,3 +40,8 @@ UWAGA:
 - Dodanie losowej rozszeszalności obiektów
 - Poprawnienie ustawnienia kanwy i guzików (dalej drobne problemy)
 - Lekka refactoryzacja kodu
+
+#Piotr Rachwalik
+
+- Dostosowałem poożenie przycisków w zależności od skalowania
+- Naprawiłem błąd skalowania dla okna animacji gdzie działy się dziwne błędy - teraz skaluje się poprawnie ale niestety przy skalowaniu resetuje się animacja (nie wiem czy da się zrobić inaczej, ale jak ktoś potrafi to mozna to zmienić)
