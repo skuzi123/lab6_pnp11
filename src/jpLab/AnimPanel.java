@@ -6,6 +6,7 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.ArrayList;
+import java.util.Random;
 
 public class AnimPanel extends JPanel implements ActionListener {
 
@@ -26,10 +27,12 @@ public class AnimPanel extends JPanel implements ActionListener {
 
     public int delay=25;
     private Timer timer;
-
+private static Color color;
     public AnimPanel(){
         super();
         setBackground(Color.WHITE);
+        Random random= new Random();
+        this.color = new Color(random.nextInt(255), random.nextInt(255), random.nextInt(255));
         timer= new Timer(delay, this);
     }
 
@@ -61,12 +64,32 @@ public class AnimPanel extends JPanel implements ActionListener {
     }
 
     void addCreature(){
-        Creature test=new Kulka(bufer,delay,getWidth(), getHeight(),30, Color.MAGENTA);
+        Creature test=new Kulka(bufer,delay,getWidth(), getHeight(),10, color);
         kulki.add(test);
         timer.addActionListener(test);
         Thread boi=new Thread(test);
         watki.add(boi);
         boi.start();
+
+    }
+    /**
+     * Author: Mateusz Skuza
+     * Dodałem możliwość zmiany koloru
+     * Dodałem możliwość losowego koloru
+     */
+    protected void setColor(int whichOne)
+    {
+        switch(whichOne)
+        {
+            case 1:
+                this.color = JColorChooser.showDialog(null,"Choose a color",Color.black);
+                break;
+            case 2:
+                Random random = new Random();
+                this.color = new Color(random.nextInt(255), random.nextInt(255), random.nextInt(255));
+                break;
+        }
+
 
     }
     @Override

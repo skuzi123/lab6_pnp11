@@ -30,3 +30,13 @@ UWAGA:
 - Dodanie losowej rozszeszalności obiektów
 - Poprawnienie ustawnienia kanwy i guzików (dalej drobne problemy)
 - Lekka refactoryzacja kodu
+
+#Mateusz Skuza
+
+-Dodałem przycisk umożliwiający zmianę koloru kulki.
+
+-Dodałem przycisk umożliwiający generowanie losowego koloru wyświetlającej się kulki 
+
+#Andrzej Kwaśniewski
+
+- Dodałem przycisk wyjścia z aplikacji
