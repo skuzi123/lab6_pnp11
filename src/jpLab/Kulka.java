@@ -18,5 +18,6 @@ public class Kulka extends Creature{
         shape= new Ellipse2D.Float(0,0,s,s);
         aft= new AffineTransform();
         area= new Area(shape);
+
     }
 }

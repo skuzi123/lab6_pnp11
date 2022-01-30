@@ -62,7 +62,11 @@ public abstract  class Creature implements Runnable, ActionListener {
         buffer=buf;
         dx= 1+ rand.nextInt(3);
         dy= 1+ rand.nextInt(3);
+
+
+        Random random= new Random();
         clr=cl;
+        //this.clr = new Color(random.nextInt(255), random.nextInt(255), random.nextInt(255));
         rot = 0.1 * rand.nextDouble();  //jak potrzeba rotacji to odkomentuj
     }
     @Override

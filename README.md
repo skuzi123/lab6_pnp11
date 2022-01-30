@@ -23,3 +23,9 @@ UWAGA:
 #Arek Pytka 
 
 - Dodałem klase SwingElements dzięki której można tworzyć predefiniowane elementy biblioteki Swing. Jak coś trzeba to zmieniajcie lub dodawajcie :)
+
+#Mateusz Skuza
+
+-Dodałem przycisk umożliwiający zmianę koloru kulki.
+
+-Dodałem przycisk umożliwiający generowanie losowego koloru wyświetlającej się kulki 
