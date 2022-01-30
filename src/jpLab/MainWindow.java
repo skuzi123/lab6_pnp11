@@ -12,6 +12,7 @@ public class MainWindow extends JFrame {
     private final int WINDOW_WIDTH = 1000;
     private final int WINDOW_HEIGHT = 800;
     private JPanel jPanel;
+    private JTextField textField;
     private AnimPanel kanwa;
 
 
@@ -50,9 +51,13 @@ public class MainWindow extends JFrame {
         jPanel.add(btnAnimate);
 
         JButton btnAdd = SWING_ELEMENTS.createButton("Add");
-        btnAdd.addActionListener( e -> kanwa.addCreature());
+        btnAdd.addActionListener( e -> kanwa.addCreature(Integer.parseInt(textField.getText())));
         btnAdd.setLocation(10, WINDOW_HEIGHT-57);
         jPanel.add(btnAdd);
+
+        textField = new JTextField("10");
+        textField.setBounds(210, WINDOW_HEIGHT-57, 50, 20);
+        jPanel.add(textField);
 
 
         /**
@@ -104,6 +109,7 @@ public class MainWindow extends JFrame {
                 colorButton.setLocation(w1,h-27);
                 randomColor.setLocation(w2,h-27);
                 btnExit.setLocation(w3, h-27);
+                textField.setLocation(212, h-27);
 
             }
         });

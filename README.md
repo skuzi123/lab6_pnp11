@@ -45,3 +45,7 @@ UWAGA:
 
 - Dostosowałem poożenie przycisków w zależności od skalowania
 - Naprawiłem błąd skalowania dla okna animacji gdzie działy się dziwne błędy - teraz skaluje się poprawnie ale niestety przy skalowaniu resetuje się animacja (nie wiem czy da się zrobić inaczej, ale jak ktoś potrafi to mozna to zmienić)
+
+#Michał Salamon
+
+- Dodałem pole tekstowe, które ustawia wielkość kulki przy jej dodaniu do listy

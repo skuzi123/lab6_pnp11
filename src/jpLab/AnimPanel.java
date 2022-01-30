@@ -63,8 +63,13 @@ private static Color color;
         }
     }
 
-    void addCreature(){
-        Creature test=new Kulka(bufer,delay,getWidth(), getHeight(),10, color);
+    void addCreature(int diameter){
+        Creature test;
+        if(diameter>10) {
+            test = new Kulka(bufer, delay, getWidth(), getHeight(), diameter, color);
+        }else{
+            test = new Kulka(bufer, delay, getWidth(), getHeight(), 10, color);
+        }
         kulki.add(test);
         timer.addActionListener(test);
         Thread boi=new Thread(test);
