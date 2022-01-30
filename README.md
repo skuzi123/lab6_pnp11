@@ -19,3 +19,7 @@ UWAGA:
 - w anim panel trzeba dopracować animowanie. w main window macie dwa guziki do dodawania figury do tablicy i do startowania jej animacji.
 
 - potem dorobie rescale ładny bo coś dół ucina
+
+#Arek Pytka 
+
+- Dodałem klase SwingElements dzięki której można tworzyć predefiniowane elementy biblioteki Swing. Jak coś trzeba to zmieniajcie lub dodawajcie :)
