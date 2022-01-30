@@ -53,7 +53,7 @@ public class MainWindow extends JFrame {
 
             }
         });
-        btnAnimate.setLocation(110, WINDOW_HEIGHT-57);
+        btnAnimate.setLocation(110, WINDOW_HEIGHT-62);
         jPanel.add(btnAnimate);
 
 
@@ -65,15 +65,32 @@ public class MainWindow extends JFrame {
                 kanwa.addCreature();
             }
         });
-        btnAdd.setLocation(10, WINDOW_HEIGHT-57);
-
+        btnAdd.setLocation(10, WINDOW_HEIGHT-62);
         jPanel.add(btnAdd);
 
+
+        /**
+         *   @author Andrzej Kwaśniewski
+         *
+         *   Stworzony przycisk do wyłączania programu
+         */
+        JButton btnExit = SWING_ELEMENTS.createButton("Exit");
+        btnExit.setBackground(Color.GRAY);
+
+        btnExit.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                System.exit(0);
+            }
+        });
+        btnExit.setLocation(890, WINDOW_HEIGHT-62);
+        jPanel.add(btnExit);
+
         JButton colorButton = SWING_ELEMENTS.createButton("Choose color");
-        colorButton.setLocation(290,WINDOW_HEIGHT-57);
+        colorButton.setLocation(290,WINDOW_HEIGHT-62);
         colorButton.setSize(190,20);
         JButton randomColor = SWING_ELEMENTS.createButton("Random color");
-        randomColor.setLocation(500,WINDOW_HEIGHT-57);
+        randomColor.setLocation(500,WINDOW_HEIGHT-62);
         randomColor.setSize(190,20);
         colorButton.addActionListener(e -> kanwa.setColor(1));
         randomColor.addActionListener(e -> kanwa.setColor(2));

@@ -29,3 +29,7 @@ UWAGA:
 -Dodałem przycisk umożliwiający zmianę koloru kulki.
 
 -Dodałem przycisk umożliwiający generowanie losowego koloru wyświetlającej się kulki 
+
+#Andrzej Kwaśniewski
+
+- Dodałem przycisk wyjścia z aplikacji
