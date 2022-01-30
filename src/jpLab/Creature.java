@@ -26,6 +26,7 @@ public abstract  class Creature implements Runnable, ActionListener {
     // przeksztalcenie obiektu
     protected AffineTransform aft;
 
+    private double sf;
 
     //do rysowania
     protected Shape shape;
@@ -61,6 +62,7 @@ public abstract  class Creature implements Runnable, ActionListener {
         size=s;
         buffer=buf;
         dx= 1+ rand.nextInt(3);
+        sf = 1 + 0.008 * rand.nextDouble();
         dy= 1+ rand.nextInt(3);
         clr=cl;
         rot = 0.1 * rand.nextDouble();  //jak potrzeba rotacji to odkomentuj
@@ -72,7 +74,7 @@ public abstract  class Creature implements Runnable, ActionListener {
          * albo pojawiamy kulki z jakąs przerwą od siebie(np. 1s) <-wole to
          * albo losujemy pozycje w zakresie pola animacji(wtedy trzeba jakoś przekazac tutaj rozmiary)
          */
-        aft.translate(100,100);
+        aft.translate(rand.nextInt(971)+10,rand.nextInt(640)+11);
         area.transform(aft);
         shape=area;
 
@@ -101,11 +103,14 @@ public abstract  class Creature implements Runnable, ActionListener {
         if (cy < 0 || cy > height)
             dy = -dy;
         // zwiekszenie lub zmniejszenie
+//        if (bounds.height < 10)
+//            sf;
 
         // konstrukcja przeksztalcenia
         aft.translate(cx, cy);
 
         aft.rotate(rot);
+        aft.scale(sf, sf);
         aft.translate(-cx, -cy);
         aft.translate(dx, dy);
         // przeksztalcenie obiektu

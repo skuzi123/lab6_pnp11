@@ -2,8 +2,6 @@ package jpLab;
 
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 import java.awt.event.ComponentAdapter;
 import java.awt.event.ComponentEvent;
 
@@ -27,13 +25,14 @@ public class MainWindow extends JFrame {
     }
 
     private void initComponents() {
+
         jPanel = new JPanel();
         jPanel.setBounds(0, 0, WINDOW_WIDTH, WINDOW_HEIGHT);
         setContentPane(jPanel);
         jPanel.setLayout(null);
 
         kanwa= new AnimPanel();
-        kanwa.setBounds(10, 11, WINDOW_WIDTH-10, WINDOW_HEIGHT-140);
+        kanwa.setBounds(1, 1, WINDOW_WIDTH-10, WINDOW_HEIGHT-70);
         jPanel.add(kanwa);
         SwingUtilities.invokeLater(new Runnable() {
 
@@ -44,33 +43,16 @@ public class MainWindow extends JFrame {
             }
         });
 
-
         JButton btnAnimate = SWING_ELEMENTS.createButton("Animate");
         btnAnimate.setBackground(Color.RED);
-        btnAnimate.addActionListener(new ActionListener() {
-            public void actionPerformed(ActionEvent e) {
-                kanwa.animate();
-
-            }
-        });
+        btnAnimate.addActionListener(e -> kanwa.animate());
         btnAnimate.setLocation(110, WINDOW_HEIGHT-57);
         jPanel.add(btnAnimate);
 
-
-
-
         JButton btnAdd = SWING_ELEMENTS.createButton("Add");
-        btnAdd.addActionListener(new ActionListener() {
-            public void actionPerformed(ActionEvent e) {
-                kanwa.addCreature();
-            }
-        });
+        btnAdd.addActionListener( e -> kanwa.addCreature());
         btnAdd.setLocation(10, WINDOW_HEIGHT-57);
         jPanel.add(btnAdd);
-
-
-
-
 
         /**
          * to reskaluje okno animacji do wielkości całego okna
@@ -80,7 +62,7 @@ public class MainWindow extends JFrame {
             public void componentResized(ComponentEvent e) {
                 super.componentResized(e);
                 int w=jPanel.getWidth(),h=jPanel.getHeight();
-                kanwa.setBounds(10,10,w-20,h-50);
+                kanwa.setBounds(10,10,w,h-30);
 
             }
         });

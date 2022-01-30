@@ -24,16 +24,13 @@ public class AnimPanel extends JPanel implements ActionListener {
     Graphics2D device;
     Graphics2D bufer;
 
-    public int delay=70;
+    public int delay=25;
     private Timer timer;
 
     public AnimPanel(){
         super();
         setBackground(Color.WHITE);
         timer= new Timer(delay, this);
-
-
-
     }
 
     public void init(){
@@ -45,8 +42,6 @@ public class AnimPanel extends JPanel implements ActionListener {
         bufer.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
         device = (Graphics2D) getGraphics();
         device.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
-
-
     }
 
     public void clearAll(){
@@ -66,7 +61,7 @@ public class AnimPanel extends JPanel implements ActionListener {
     }
 
     void addCreature(){
-        Creature test=new Kulka(bufer,delay,getWidth(), getHeight(),10, Color.MAGENTA);
+        Creature test=new Kulka(bufer,delay,getWidth(), getHeight(),30, Color.MAGENTA);
         kulki.add(test);
         timer.addActionListener(test);
         Thread boi=new Thread(test);
