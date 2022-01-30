@@ -59,6 +59,13 @@ public class MainWindow extends JFrame {
         textField.setBounds(210, WINDOW_HEIGHT-57, 50, 20);
         jPanel.add(textField);
 
+        /**
+         * przycisk do czyszczenia
+         */
+        JButton btnReset = SWING_ELEMENTS.createButton("Reset");
+        btnReset.addActionListener(e -> kanwa.reset());
+        btnReset.setLocation(780, WINDOW_HEIGHT-57);
+        jPanel.add(btnReset);
 
         /**
          *   @author Andrzej Kwaśniewski
@@ -101,8 +108,12 @@ public class MainWindow extends JFrame {
                     w2=370;
 
                 int w3 = w-110;
-                if (w3 <=530)
-                    w3=530;
+                if (w3 <=690)
+                    w3=690;
+
+                int w4=w-220;
+                if(w4<=530)
+                    w4=530;
 
                 btnAnimate.setLocation(110, h-27);
                 btnAdd.setLocation(10, h-27);
@@ -110,6 +121,7 @@ public class MainWindow extends JFrame {
                 randomColor.setLocation(w2,h-27);
                 btnExit.setLocation(w3, h-27);
                 textField.setLocation(212, h-27);
+                btnReset.setLocation(w4,h-27);
 
             }
         });

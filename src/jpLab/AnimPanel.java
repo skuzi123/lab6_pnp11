@@ -55,6 +55,15 @@ private static Color color;
         init();
     }
 
+    public void reset()
+    {
+        image.flush();
+        bufer.dispose();
+        device.dispose();
+        kulki.clear();
+        init();
+    }
+
     void animate(){
         if (timer.isRunning()) {
             timer.stop();

@@ -49,3 +49,7 @@ UWAGA:
 #Michał Salamon
 
 - Dodałem pole tekstowe, które ustawia wielkość kulki przy jej dodaniu do listy
+
+#Karol Rakicki
+
+- Dodałem przycisk reset
